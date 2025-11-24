@@ -1,47 +1,55 @@
-.app {
+body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  text-align: center;
+  background: #f5f5f5;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
   padding: 20px;
-  background-color: #f5f5f5;
 }
 
+/* Banner */
 .banner {
-  background-image: url('https://images.unsplash.com/photo-1599577183866-3ab2c6e58c6f'); 
-  background-size: cover;
-  color: white;
-  padding: 50px 20px;
-  border-radius: 12px;
-  margin-bottom: 40px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  width: 100%;
+  padding: 30px;
+  background: linear-gradient(90deg, #008f39, #ffffff, #d50000);
+  color: black;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-.tarjetas-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.descripcion {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid de tarjetas */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
 }
 
-.tarjeta {
-  background-color: white;
-  border: 3px solid #ccc;
+/* Tarjeta */
+.card {
+  background: white;
+  padding: 20px;
   border-radius: 12px;
-  width: 150px;
-  padding: 15px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-  transition: transform 0.2s;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
 }
 
-.tarjeta:hover {
+.card:hover {
   transform: scale(1.05);
 }
 
-.bandera {
-  font-size: 40px;
-}
-
-.color {
-  height: 15px;
-  margin-top: 10px;
-  border-radius: 6px;
+.card h2 {
+  margin-bottom: 10px;
 }

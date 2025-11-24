@@ -1,11 +1,8 @@
-import React from 'react';
-
-export default function TarjetaPais({ pais }) {
+export default function TarjetaPais({ rango, nombre, puntos }) {
   return (
-    <div className="tarjeta" style={{ borderColor: pais.color }}>
-      <div className="bandera">{pais.bandera}</div>
-      <h3>{pais.nombre}</h3>
-      <div className="color" style={{ backgroundColor: pais.color }}></div>
+    <div className="card">
+      <h2>{rango}. {nombre}</h2>
+      <p>Puntos: {puntos}</p>
     </div>
   );
 }
