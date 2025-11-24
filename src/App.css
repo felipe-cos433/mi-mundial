@@ -1,0 +1,47 @@
+.app {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.banner {
+  background-image: url('https://images.unsplash.com/photo-1599577183866-3ab2c6e58c6f'); 
+  background-size: cover;
+  color: white;
+  padding: 50px 20px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.tarjetas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tarjeta {
+  background-color: white;
+  border: 3px solid #ccc;
+  border-radius: 12px;
+  width: 150px;
+  padding: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+}
+
+.bandera {
+  font-size: 40px;
+}
+
+.color {
+  height: 15px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
