@@ -1,55 +1,69 @@
+/* --- ESTILOS GENERALES --- */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
+  background: #0b1221;       /* azul oscuro estilo Champions */
+  font-family: "Poppins", sans-serif;
+  color: #fff;
 }
 
+/* --- CONTENEDOR PRINCIPAL --- */
 .container {
+  width: 90%;
   max-width: 1100px;
   margin: auto;
-  padding: 20px;
+  padding: 20px 0;
 }
 
-/* Banner */
-.banner {
-  width: 100%;
-  padding: 30px;
-  background: linear-gradient(90deg, #008f39, #ffffff, #d50000);
-  color: black;
+/* --- TITULO PRINCIPAL --- */
+h1 {
   text-align: center;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #00e676;             /* verde neon */
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00e676;
 }
 
-.descripcion {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Grid de tarjetas */
+/* --- GRID DE TARJETAS --- */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
 }
 
-/* Tarjeta */
+/* --- TARJETA DE PAIS --- */
 .card {
-  background: white;
+  background: linear-gradient(145deg, #162036, #0c1524);
   padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: 0.2s;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 135, 0.2);
+  transition: all 0.25s ease;
+  border: 1px solid rgba(0, 255, 135, 0.3);
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 255, 135, 0.4);
 }
 
+/* RANGO Y NOMBRE */
 .card h2 {
-  margin-bottom: 10px;
+  font-size: 1.4rem;
+  margin: 0 0 10px 0;
+  color: #00e676;
+}
+
+/* PUNTOS */
+.card p {
+  margin: 0;
+  color: #b8c4d4;
+  font-size: 1.1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2rem;
+  }
 }

@@ -1,0 +1,75 @@
+/* Reset y tipografía */
+* { box-sizing: border-box; margin:0; padding:0; font-family: "Segoe UI", Arial, sans-serif; }
+body { background-color: #f5f6fa; color: #333; }
+.app { max-width: 1400px; margin: 0 auto; padding: 20px; }
+
+/* Banner */
+.banner {
+  position: relative;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/4d/FIFA_World_Cup_trophy_2014.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+.banner .overlay {
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+}
+.banner .overlay h1 { font-size: 2rem; margin-bottom: 10px; }
+.banner .overlay p { font-size: 1.1rem; line-height: 1.4; }
+
+/* Tarjetas */
+.tarjetas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+.tarjeta {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.tarjeta:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+.tarjeta-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+.tarjeta-header h3 { font-size:1.2rem; }
+.tarjeta-header span { font-weight:bold; font-size:1rem; background-color: rgba(255,255,255,0.2); padding:3px 8px; border-radius:8px; }
+.tarjeta-body p { font-size:1rem; font-weight:500; }
+
+/* Gráficas */
+.graficas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 35px;
+  margin-bottom: 60px;
+}
+.grafica-card {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+}
+.grafica-card:hover { transform: translateY(-6px); }
+.grafica-card h2 { margin-bottom: 20px; font-size: 1.4rem; color: #2c3e50; }
+
+/* Responsive */
+@media(max-width:768px){
+  .tarjetas-container { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+  .graficas-container { grid-template-columns: 1fr; }
+}
